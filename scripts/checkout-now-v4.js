@@ -340,7 +340,7 @@ const getVrioOfferIdByProductId = (productId) =>
 sessionStorage.setItem("integrationId", INTEGRATION_ID);
 
 const getPrices = () => {
-  return [{"name":"VIP Customer Benefits","id":26,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"VIP Customer Benefits","discountAmount":0,"discountPercentage":0},{"name":"1x Pack of Detox Tea (28 Bags)","id":1749,"quantity":1,"price":0,"shippable":false,"fullPrice":36.07,"finalPrice":36.07,"productName":"1x Pack of Detox Tea (28 Bags)","discountAmount":0,"discountPercentage":0},{"name":"2x Pack of Detox Tea (56 Bags)","id":1746,"quantity":1,"price":0,"shippable":false,"fullPrice":59.56,"finalPrice":59.56,"productName":"2x Pack of Detox Tea (56 Bags)","discountAmount":0,"discountPercentage":0},{"name":"3x Pack of Detox Tea (84 Bags)","id":1747,"quantity":1,"price":0,"shippable":false,"fullPrice":77.77,"finalPrice":77.77,"productName":"3x Pack of Detox Tea (84 Bags)","discountAmount":0,"discountPercentage":0},{"name":"Akemi Detox Tea  Journey Package Protection","id":1703,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Akemi Detox Tea  Journey Package Protection","discountAmount":0,"discountPercentage":0},{"name":"Akemi Detox Tea - 3 Year Warranty","id":1702,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Akemi Detox Tea - 3 Year Warranty","discountAmount":0,"discountPercentage":0},{"name":"Special 1x EXTRA Akemi Detox Tea","id":1704,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Special 1x EXTRA Akemi Detox Tea","discountAmount":0,"discountPercentage":0},{"name":"Special 1x EXTRA Akemi Detox Tea","id":1719,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Special 1x EXTRA Akemi Detox Tea","discountAmount":0,"discountPercentage":0}]
+  return [{"name":"VIP Customer Benefits","id":26,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"VIP Customer Benefits","discountAmount":0,"discountPercentage":0},{"name":"1x Pack of Detox Tea (28 Bags)","id":1749,"quantity":1,"price":0,"shippable":false,"fullPrice":25.95,"finalPrice":25.95,"productName":"1x Pack of Detox Tea (28 Bags)","discountAmount":0,"discountPercentage":0},{"name":"2x Pack of Detox Tea (56 Bags)","id":1746,"quantity":1,"price":0,"shippable":false,"fullPrice":42.85,"finalPrice":42.85,"productName":"2x Pack of Detox Tea (56 Bags)","discountAmount":0,"discountPercentage":0},{"name":"3x Pack of Detox Tea (84 Bags)","id":1747,"quantity":1,"price":0,"shippable":false,"fullPrice":55.95,"finalPrice":55.95,"productName":"3x Pack of Detox Tea (84 Bags)","discountAmount":0,"discountPercentage":0},{"name":"Akemi Detox Tea  Journey Package Protection","id":1703,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Akemi Detox Tea  Journey Package Protection","discountAmount":0,"discountPercentage":0},{"name":"Akemi Detox Tea - 3 Year Warranty","id":1702,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Akemi Detox Tea - 3 Year Warranty","discountAmount":0,"discountPercentage":0},{"name":"Special 1x EXTRA Akemi Detox Tea","id":1704,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Special 1x EXTRA Akemi Detox Tea","discountAmount":0,"discountPercentage":0},{"name":"Special 1x EXTRA Akemi Detox Tea","id":1719,"quantity":1,"price":0,"shippable":false,"fullPrice":0,"finalPrice":0,"productName":"Special 1x EXTRA Akemi Detox Tea","discountAmount":0,"discountPercentage":0}]
 };
 
 const SUPPORTED_ADDRESS_COUNTRIES = [{"name":"United States of America","iso_2":"US"},{"name":"Canada","iso_2":"CA"},{"name":"United Kingdom","iso_2":"GB"},{"name":"Australia","iso_2":"AU"},{"name":"Germany","iso_2":"DE"},{"name":"France","iso_2":"FR"},{"name":"Spain","iso_2":"ES"},{"name":"Italy","iso_2":"IT"}];
@@ -614,7 +614,7 @@ async function createOrderViaWallet(confirmationToken, paymentMethodId) {
         ?.getAttribute("data-shipping-profile-id") || undefined;
 
   const orderData = {
-    pageId: "R-30xae6YLZrdM0lnEEeo320tsVBOQgj5l-hcTxIxmz5N92rgG0lO2aHxFZIRx9w",
+    pageId: "z0ebeKChPReBNiVG0EBMlsZsLWhWGVqfsaKkaaQyilw7OdpxfkBY06S8nYcj6ZaC",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
@@ -1412,7 +1412,7 @@ async function createOrderViaPaypal(isExpress = false) {
   const shippingProfileId = +document.querySelector(`[data-product-id="${selectedProduct.id}"]`)?.getAttribute('data-shipping-profile-id') || undefined;
   const sameAddress = isSameAddress();
   const orderData = {
-    pageId: "R-30xae6YLZrdM0lnEEeo320tsVBOQgj5l-hcTxIxmz5N92rgG0lO2aHxFZIRx9w",
+    pageId: "z0ebeKChPReBNiVG0EBMlsZsLWhWGVqfsaKkaaQyilw7OdpxfkBY06S8nYcj6ZaC",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -1712,7 +1712,7 @@ async function createOrderViaKlarna() {
   const sameAddress = isSameAddress();
 
   const orderData = {
-    pageId: "R-30xae6YLZrdM0lnEEeo320tsVBOQgj5l-hcTxIxmz5N92rgG0lO2aHxFZIRx9w",
+    pageId: "z0ebeKChPReBNiVG0EBMlsZsLWhWGVqfsaKkaaQyilw7OdpxfkBY06S8nYcj6ZaC",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1,
     email: email,
@@ -2091,7 +2091,7 @@ async function createOrderViaCreditCard() {
   let orderTotal = Math.max(0, Number(selectedProduct.price) * selectedProduct.quantity);
 
   const orderData = {
-    pageId: "R-30xae6YLZrdM0lnEEeo320tsVBOQgj5l-hcTxIxmz5N92rgG0lO2aHxFZIRx9w",
+    pageId: "z0ebeKChPReBNiVG0EBMlsZsLWhWGVqfsaKkaaQyilw7OdpxfkBY06S8nYcj6ZaC",
     action: "process",
     campaign_id: CAMPAIGN_ID,
     connection_id: 1, // VRIO URL ending /connection
@@ -4366,7 +4366,7 @@ async function returnPaypal() {
 ;
 
     const body = {
-        pageId: "R-30xae6YLZrdM0lnEEeo320tsVBOQgj5l-hcTxIxmz5N92rgG0lO2aHxFZIRx9w",
+        pageId: "z0ebeKChPReBNiVG0EBMlsZsLWhWGVqfsaKkaaQyilw7OdpxfkBY06S8nYcj6ZaC",
         action: "process",
         campaign_id: CAMPAIGN_ID,
         connection_id: 1,
