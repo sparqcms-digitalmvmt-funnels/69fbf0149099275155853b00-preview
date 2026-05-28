@@ -77,7 +77,7 @@ if (localStorage.getItem('sK_r')) {
 const route = async () => {
   if (localStorage.getItem('sK_r')) return JSON.parse(localStorage.getItem('sK_r'));
   const sessionId = MVMT.getSessionId() || localStorage.getItem("mvmt_session_id") || "";
-  const url = 'https://func-ab-test-events-prod-001.azurewebsites.net/api/checkRoute?id=69fbf0149099275155853b00&v=177999224648111&sessionId='+sessionId;
+  const url = 'https://func-ab-test-events-prod-001.azurewebsites.net/api/checkRoute?id=69fbf0149099275155853b00&v=177999293789956&sessionId='+sessionId;
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Network response was not ok');
@@ -246,9 +246,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   });
 </script>
   <link rel="stylesheet" href="styles/index-v1-dtcv4.css" /><style>@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
-</style><style>@layer imported{.red {
-  color: red;
-}}</style><style>@layer imported{@charset "UTF-8";/*!
+</style><style>@layer imported{@charset "UTF-8";/*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
@@ -1023,7 +1021,6 @@ p.review-para {
 }
 
 .accordion .accordion-arrow {
-    content: '';
     position: absolute;
     right: 0;
     width: 50px;
