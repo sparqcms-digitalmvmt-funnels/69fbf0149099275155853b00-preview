@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const endpoint =
     `orders?order_id=${orderids.join(",")}` +
-    `&with=order_offers,customer_address_billing,customer_address_shipping,customer,transactions,cart&pageId=IzMHD7UXz2983DMq2mcWA1j17uNygKQTf5uOSZ5NmFATgiR2E6vw64kj_ujVkJ6i`
+    `&with=order_offers,customer_address_billing,customer_address_shipping,customer,transactions,cart&pageId=AIdVTH9ZLlTF2n93aRfvaPHFQxVYh8g5dgrHO7T6sl2L3VmQCUQKddkIOZqq05hA`
 
   const response = await fetch(
     `https://app-cms-api-proxy-prod-001.azurewebsites.net/vrio/${endpoint}`,
